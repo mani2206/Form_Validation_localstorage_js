@@ -1,0 +1,46 @@
+@import "./abstracts/variables";
+@import "./abstracts/common";
+@import "./abstracts/variables";
+@import "./includes/footer";
+@import "./includes/header";
+@import "./mixins/breakpoints";
+
+.header {
+  background: url("../../assets/images/background_image.jpg") no-repeat;
+  background-color: #191b22;
+  opacity: 0.9;
+  padding: 40px 30px;
+  @include media-min-md {
+    text-align: center;
+  }
+  .social-media {
+    @include media-min-md {
+      justify-content: center;
+    }
+    li {
+      list-style: none;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 50%;
+      margin: 5px;
+      &:hover {
+        border: 1px solid red;
+      }
+      i {
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+//form style
+.form {
+  padding: 0 15px;
+  @include media-min-md{
+     width:80%;
+     margin:0 auto;
+  }
+}
+
